@@ -125,4 +125,6 @@ function mock
   $newString | clip
 }
 
-cls
+Import-Module oh-my-posh
+oh-my-posh --init --shell pwsh --config ~/git/phill-holbrook/AtomicPH.json | Invoke-Expression
+Clear-Host
