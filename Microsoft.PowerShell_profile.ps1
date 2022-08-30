@@ -125,6 +125,10 @@ function mock
   $newString | clip
 }
 
+function top {
+  While(1) {ps | sort -des cpu | select cpu, vm, id, processname, path | select -f 15 | ft -a; sleep 5; cls}
+}
+
 Import-Module oh-my-posh
 oh-my-posh --init --shell pwsh --config ~/git/phill-holbrook/AtomicPH.json | Invoke-Expression
 Clear-Host
